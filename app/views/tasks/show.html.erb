@@ -1,0 +1,9 @@
+<h1> Restaurant <%= @task.title %> </h1>
+
+Info: <p> <%=@task.details%> </p>
+Done?: <p> <%=@task.completed%></p>
+
+<%= link_to 'Back to all Restaurant', restaurants_path %>
+<%= link_to 'delete',
+  task_path(@task),
+  data:{turbo_method: :delete, turbo_confirm: "are you sure?" %>
